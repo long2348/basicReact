@@ -1,7 +1,8 @@
 import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
-function App() {
+const App = () => {
   return (
     <div className="App">
       <header className="App-header">
@@ -9,6 +10,7 @@ function App() {
         <p>
           Hello world
         </p>
+        <p className='mt-4 text-danger'>abc</p>
         <a
           className="App-link"
           href="https://reactjs.org"

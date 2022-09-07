@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import MyFirstComponent from './Example/MyFirstComponent';
 
 const App = () => {
   return (
@@ -19,6 +20,7 @@ const App = () => {
         >
           Learn React
         </a>
+        <MyFirstComponent />
       </header>
     </div>
   );

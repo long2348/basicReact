@@ -1,5 +1,4 @@
-import React from 'react';
-import './demo.scss'
+import React from "react";
 
 class ChildComponent extends React.Component {
     state = {
@@ -12,7 +11,6 @@ class ChildComponent extends React.Component {
     }
 
     handleOnClickDelete = (job) => {
-        console.log("click", job)
         this.props.deleteJob(job)
     }
 
@@ -20,7 +18,6 @@ class ChildComponent extends React.Component {
         let { arrJob } = this.props;
         let { showJob } = this.state;
         let check = showJob === true ? 'showjob = true' : 'showjob = false';
-        console.log(check);
         return (
             <>
                 {showJob === false ?
@@ -52,26 +49,6 @@ class ChildComponent extends React.Component {
             </>
         )
     }
-
 }
 
-// const ChildComponent = (props) => {
-//     let { arrJob } = props;
-//     return (
-//         <div>
-//             {
-//                 arrJob.map((item, index) => {
-//                     if (item.salary >= 500) {
-//                         return (
-//                             <div key={item.id}>
-//                                 {item.title} {item.salary}
-//                             </div>
-//                         )
-//                     }
-
-//                 })
-//             }
-//         </div>
-//     )
-// }
-export default ChildComponent;
+export default ChildComponent 

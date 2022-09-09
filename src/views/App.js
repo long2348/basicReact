@@ -1,20 +1,37 @@
 import logo from './logo.svg';
 import './App.scss';
+import Nav from './nav/Nav'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import MyFirstComponent from './Example/MyFirstComponent';
-import ListToDo from './ToDo/ListToDo';
+import {
+  BrowserRouter,
+} from "react-router-dom";
+import { ToastContainer } from 'material-react-toastify';
+import 'material-react-toastify/dist/ReactToastify.css';
+import Routess from '../router/Routerss';
 
-const App = () => {
+
+function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <div className='mt-2'>
-          {/* <MyFirstComponent /> */}
-          {<ListToDo />}
-        </div>
-      </header>
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        <header className="App-header">
+          <Nav />
+          <img src={logo} className="App-logo" alt="logo" />
+          <Routess />
+        </header>
+        <ToastContainer
+          position="top-right"
+          autoClose={2500}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+        />
+      </div>
+    </BrowserRouter>
   );
 }
 

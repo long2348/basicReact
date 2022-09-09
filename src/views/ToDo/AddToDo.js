@@ -12,6 +12,10 @@ class AddToDo extends React.Component {
     }
 
     onCLick = () => {
+        if (!this.state.title) {
+            alert('title empty')
+            return;
+        }
         let todo = {
             id: Math.floor(Math.random() * 10001),
             title: this.state.title
@@ -26,13 +30,16 @@ class AddToDo extends React.Component {
     render() {
         let { title } = this.state;
         return (
-            <div className="add-todo">
-                <input type='text' value={title}
-                    onChange={(event) => this.handleOnChange(event)} />
-                <button onClick={() => this.onCLick()}>
-                    Add
-                </button>
-            </div>
+            <>
+                <h4 className="mt-4">2nd Component</h4>
+                <div className="add-todo">
+                    <input type='text' value={title}
+                        onChange={(event) => this.handleOnChange(event)} />
+                    <button onClick={() => this.onCLick()}>
+                        Add
+                    </button>
+                </div>
+            </>
         )
     }
 }

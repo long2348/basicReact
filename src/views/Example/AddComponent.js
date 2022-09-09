@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 class AddComponent extends React.Component {
     state = {
@@ -19,8 +19,6 @@ class AddComponent extends React.Component {
     }
 
     handleOnClick = () => {
-        // event.prevenDefault(); 
-        console.log(this.state);
         this.props.addNewJob({
             id: Math.floor(Math.random() * 10001),
             title: this.state.title,
@@ -36,6 +34,7 @@ class AddComponent extends React.Component {
     render() {
         return (
             <>
+                <h4>1st Component</h4>
                 <form>
                     <label htmlFor="title">Title Job:</label><br />
                     <input
@@ -58,6 +57,6 @@ class AddComponent extends React.Component {
         )
 
     }
-
 }
-export default AddComponent;
+
+export default AddComponent

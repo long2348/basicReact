@@ -1,7 +1,7 @@
-import React from 'react';
-import AddComponent from './AddComponent';
-import ChildComponent from './ChildComponent';
-
+import React from "react"
+import AddComponent from "./AddComponent"
+import ChildComponent from "./ChildComponent"
+import RandomColor from "../../components/RandomColor"
 
 class MyFirstComponent extends React.Component {
     state = {
@@ -14,11 +14,8 @@ class MyFirstComponent extends React.Component {
 
     addNewJob = (job) => {
         console.log("im come form", job)
-        // let newJob = this.state.arrJob
-        // newJob.push(job);
         this.setState({
             arrJob: [...this.state.arrJob, job]
-            // arrJob: newJob
         })
     }
 
@@ -41,21 +38,23 @@ class MyFirstComponent extends React.Component {
     render() {
         return (
             <>
-                <div className='mb-4'>
+                <div>
                     <AddComponent
                         addNewJob={this.addNewJob}
                     />
                 </div>
 
+                <div>
+                    <ChildComponent
+                        arrJob={this.state.arrJob}
+                        deleteJob={this.deleteJob}
+                    />
+                </div>
 
-                <ChildComponent
-                    arrJob={this.state.arrJob}
-                    deleteJob={this.deleteJob}
-                />
             </>
         )
 
     }
 
 }
-export default MyFirstComponent;
+export default RandomColor(MyFirstComponent);

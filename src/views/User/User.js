@@ -21,7 +21,6 @@ class User extends React.Component {
 
     render() {
         let { listDrink } = this.state
-        console.log("Drink list: ", listDrink)
         return (
             <>
                 <div className="list-drink-container">

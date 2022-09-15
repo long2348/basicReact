@@ -3,6 +3,7 @@ import Home from "../views/Home/Home";
 import ListToDo from "../views/ToDo/ListToDo";
 import User from "../views/User/User";
 import UserDetail from "../views/User/UserDetail";
+import MainFlex from "../views/Flex/MainFlex";
 
 const router = [
     {
@@ -24,6 +25,10 @@ const router = [
     {
         path: '/user/:userName',
         element: UserDetail
+    },
+    {
+        path: '/flex',
+        element: MainFlex
     },
 ]
 export default router

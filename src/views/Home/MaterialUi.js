@@ -20,6 +20,10 @@ class MaterialUi extends React.Component {
                         letters that extend beyond either the cap height or baseline.
                         Descenders are the downward vertical stroke in these letters. In some cases, a collision between these strokes
                         can occur when the line height (the vertical distance between baselines) is too tight.
+                        Ascenders are an upward vertical stroke found in certain lowercase
+                        letters that extend beyond either the cap height or baseline.
+                        Descenders are the downward vertical stroke in these letters. In some cases, a collision between these strokes
+                        can occur when the line height (the vertical distance between baselines) is too tight.
                     </Typography>
                 </Box>
                 <Grid container mt={2} px={5} spacing={5}>

@@ -11,6 +11,7 @@ class Home extends React.Component {
             <div>
                 {/* <img src={feature} className='feature' /> */}
                 <MaterialUi />
+                <h3 className="mt-4">Refresh để đổi màu</h3>
             </div>
         )
     }

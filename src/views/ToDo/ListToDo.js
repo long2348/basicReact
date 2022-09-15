@@ -78,7 +78,7 @@ class ListToDo extends React.Component {
                     {listToDo && listToDo.length > 0 &&
                         listToDo.map((item, index) => {
                             return (
-                                <div className="todo-child" key={item.id}>
+                                <div className="todo-child  mb-5" key={item.id}>
                                     {emptyObj === true ?
                                         <span>{index + 1}:&nbsp; {item.title}</span>
                                         :

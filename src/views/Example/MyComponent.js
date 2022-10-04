@@ -2,6 +2,7 @@ import React from "react"
 import AddComponent from "./AddComponent"
 import ChildComponent from "./ChildComponent"
 import RandomColor from "../../components/RandomColor"
+import { toast } from 'material-react-toastify';
 
 class MyFirstComponent extends React.Component {
     state = {
@@ -17,6 +18,7 @@ class MyFirstComponent extends React.Component {
         this.setState({
             arrJob: [...this.state.arrJob, job]
         })
+        toast.success('done...')
     }
 
     deleteJob = (job) => {
@@ -25,6 +27,7 @@ class MyFirstComponent extends React.Component {
         this.setState({
             arrJob: currentJob
         })
+        toast.warning('already delete...')
     }
 
     componentDidMount() {

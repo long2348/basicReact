@@ -10,7 +10,7 @@ import 'material-react-toastify/dist/ReactToastify.css';
 import Routess from '../router/Routerss';
 
 
-function App() {
+const App = () => {
   return (
     <BrowserRouter>
       <div className="App">

@@ -1,3 +1,4 @@
+import { toast } from "material-react-toastify";
 import React from "react";
 
 class AddComponent extends React.Component {
@@ -29,6 +30,7 @@ class AddComponent extends React.Component {
             title: '',
             salary: '',
         })
+        toast.success('ez pz')
     }
 
     render() {

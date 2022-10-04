@@ -9,9 +9,9 @@ class Home extends React.Component {
     render() {
         return (
             <div>
-                {/* <img src={feature} className='feature' /> */}
                 <MaterialUi />
                 <h3 className="mt-4">Refresh để đổi màu</h3>
+                <img src={feature} className='feature mb-4  ' />
             </div>
         )
     }
